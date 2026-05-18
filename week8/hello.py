@@ -22,8 +22,29 @@ def hello() -> str:
 # New - added thanks to student Tue H.!
 
 
-@app.function(image=image, region="eu")
+@app.function(image=image, region="au")
 def hello_europe() -> str:
+    import requests
+
+    response = requests.get("https://ipinfo.io/json")
+    data = response.json()
+    city, region, country = data["city"], data["region"], data["country"]
+    return f"Hello from {city}, {region}, {country}!!"
+
+
+@app.function(image=image, region="ap-south")
+def hello_india() -> str:
+    import requests
+
+    response = requests.get("https://ipinfo.io/json")
+    data = response.json()
+    city, region, country = data["city"], data["region"], data["country"]
+    return f"Hello from {city}, {region}, {country}!!"
+
+
+
+@app.function(image=image, region="au")
+def hello_aus() -> str:
     import requests
 
     response = requests.get("https://ipinfo.io/json")
