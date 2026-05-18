@@ -1,6 +1,6 @@
 # LLM Engineering - Master AI and LLMs
 
-## Your 8 week journey to proficiency starts today
+## Your 8 week journey to proficiency starts today and it is exciting
 
 ![Voyage](assets/voyage.jpg)
 
